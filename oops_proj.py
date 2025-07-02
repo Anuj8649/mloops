@@ -1,9 +1,29 @@
 class chatbook:
+    __user_id=0
     def __init__(self):
+        self.id=chatbook.__user_id #only class can acces this
+        chatbook.__user_id +=1
+        self.__name= 'default username'
+        self.user_id=0
+        self.user_id+=1
         self.username = ''
         self.password = ''
         self.loggedin = False
-        self.menu()
+       # self.menu()
+
+#static method
+    def get_id():
+        return chatbook.__user_id
+
+#static method
+    def set_id(val):
+        chatbook.__user_id=val
+
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self,value):
+        self.__name= value
 
 
 
@@ -71,5 +91,6 @@ class chatbook:
 
    
 obj = chatbook()
+#print(obj._chatbook__name)#to acces private
 
 

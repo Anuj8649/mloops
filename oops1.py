@@ -16,8 +16,20 @@ class employee:
 
 #create an object/instance of the class
 sam = employee()
+sam.name= "sam kumar"
+lam=employee()
+#both have different id
+
+print(sam.name)
+print(id(sam))
+print(id(lam))
 
 print(sam.salary)
 print(sam.id)
 sam.travel("kerala")
 print(type(sam))
+
+print(lam.salary)
+print(lam.id)
+lam.travel("siliguri")
+print(type(lam))
